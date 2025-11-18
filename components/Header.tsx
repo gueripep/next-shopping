@@ -12,7 +12,7 @@ export default function Header() {
           <h1 className="text-3xl font-bold text-blue-600">ShopNext</h1>
           <button
             onClick={toggleCart}
-            className="relative bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors"
+            className="relative bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors cursor-pointer"
           >
             Cart
             {getCartCount() > 0 && (

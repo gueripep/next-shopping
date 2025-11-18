@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/types/product";
 import { useCart } from "@/context/CartContext";
+import { useState } from "react";
 
 interface ProductCardProps {
   product: Product;
@@ -11,11 +12,14 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const { addToCart } = useCart();
+  const [isAdded, setIsAdded] = useState(false);
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     addToCart(product);
+    setIsAdded(true);
+    setTimeout(() => setIsAdded(false), 1500);
   };
 
   return (
@@ -45,9 +49,13 @@ export default function ProductCard({ product }: ProductCardProps) {
             </span>
             <button
               onClick={handleAddToCart}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+              className={`px-4 py-2 rounded-lg transition-all cursor-pointer ${
+                isAdded
+                  ? "bg-green-600 text-white"
+                  : "bg-blue-600 hover:bg-blue-700 text-white"
+              }`}
             >
-              Add to Cart
+              {isAdded ? "✓ Added!" : "Add to Cart"}
             </button>
           </div>
         </div>

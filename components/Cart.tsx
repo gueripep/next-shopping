@@ -20,7 +20,7 @@ export default function Cart() {
             <h2 className="text-2xl font-bold text-gray-800">Shopping Cart</h2>
             <button
               onClick={toggleCart}
-              className="text-gray-500 hover:text-gray-700 text-2xl"
+              className="text-gray-500 hover:text-gray-700 text-2xl cursor-pointer"
             >
               ×
             </button>
@@ -49,12 +49,12 @@ export default function Cart() {
                 ${getCartTotal().toFixed(2)}
               </span>
             </div>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold mb-2 transition-colors">
+            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold mb-2 transition-colors cursor-pointer">
               Checkout
             </button>
             <button
               onClick={clearCart}
-              className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-lg font-semibold transition-colors"
+              className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-lg font-semibold transition-colors cursor-pointer"
             >
               Clear Cart
             </button>

@@ -22,7 +22,7 @@ export default function ProductDetailPage() {
           <h1 className="text-2xl font-bold text-gray-800 mb-4">Product Not Found</h1>
           <button
             onClick={() => router.push("/")}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg cursor-pointer"
           >
             Back to Shop
           </button>
@@ -45,7 +45,7 @@ export default function ProductDetailPage() {
         <div className="container mx-auto px-6 py-5">
           <button
             onClick={() => router.push("/")}
-            className="text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-2"
+            className="text-blue-600 hover:text-blue-700 font-semibold flex items-center gap-2 cursor-pointer"
           >
             ← Back to Shop
           </button>
@@ -106,7 +106,7 @@ export default function ProductDetailPage() {
                 <div className="flex items-center gap-4">
                   <button
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="w-10 h-10 flex items-center justify-center bg-gray-200 hover:bg-gray-300 rounded-lg text-lg font-semibold"
+                    className="w-10 h-10 flex items-center justify-center bg-gray-200 hover:bg-gray-300 rounded-lg text-lg font-semibold cursor-pointer"
                   >
                     -
                   </button>
@@ -115,7 +115,7 @@ export default function ProductDetailPage() {
                   </span>
                   <button
                     onClick={() => setQuantity(quantity + 1)}
-                    className="w-10 h-10 flex items-center justify-center bg-gray-200 hover:bg-gray-300 rounded-lg text-lg font-semibold"
+                    className="w-10 h-10 flex items-center justify-center bg-gray-200 hover:bg-gray-300 rounded-lg text-lg font-semibold cursor-pointer"
                   >
                     +
                   </button>
@@ -125,7 +125,7 @@ export default function ProductDetailPage() {
               {/* Add to Cart Button */}
               <button
                 onClick={handleAddToCart}
-                className={`w-full py-4 rounded-lg font-semibold text-lg transition-all ${
+                className={`w-full py-4 rounded-lg font-semibold text-lg transition-all cursor-pointer ${
                   addedToCart
                     ? "bg-green-600 text-white"
                     : "bg-blue-600 hover:bg-blue-700 text-white"
