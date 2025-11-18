@@ -9,6 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@kameleoon/nextjs-visitor-code-manager": "^1.1.0",
+    "@kameleoon/nodejs-event-source": "^1.1.0",
+    "@kameleoon/nodejs-requester": "^1.2.0",
+    "@kameleoon/nodejs-sdk": "^5.16.1",
     "next": "16.0.3",
     "react": "19.2.0",
     "react-dom": "19.2.0"
